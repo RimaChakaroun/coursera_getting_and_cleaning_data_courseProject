@@ -17,9 +17,9 @@ if(!file.exists("UCI HAR Dataset")){unzip(filename)}
 
 #excercise1,3,4:
 #making test dataset set by merging the single components acticity, subject and the data 
-test_set<- fread("UCI HAR Dataset/test//X_test.txt", header = FALSE, stringsAsFactors = FALSE)
+test_set<- fread("UCI HAR Dataset/test/X_test.txt", header = FALSE, stringsAsFactors = FALSE)
 test_activity_labels<-fread("UCI HAR Dataset/test/y_test.txt", header = FALSE, stringsAsFactors = FALSE)
-test_subjects<- fread("UCI HAR Dataset//test/subject_test.txt", header = FALSE, stringsAsFactors = FALSE)
+test_subjects<- fread("UCI HAR Dataset/test/subject_test.txt", header = FALSE, stringsAsFactors = FALSE)
 test_data<- cbind(test_subjects, test_activity_labels, test_set)
 
 #same for training set train_data
